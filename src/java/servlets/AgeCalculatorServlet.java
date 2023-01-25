@@ -31,6 +31,7 @@ public class AgeCalculatorServlet extends HttpServlet {
         catch (NumberFormatException notAge){
             request.setAttribute("message","You must give your current age.");
         }
+        
         getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp")
                 .forward(request, response);
       }
